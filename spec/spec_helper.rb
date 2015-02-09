@@ -3,8 +3,11 @@ require 'bundler'
 Bundler.setup(:default, :test)
 
 require 'pry'
-require 'footstats'
 require 'codeclimate-test-reporter'
+require 'coveralls'
+Coveralls.wear!
+
+require 'footstats'
 
 CodeClimate::Testreport.start
 
