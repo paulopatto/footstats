@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Footstats::VERSION
   spec.authors       = ["Paulo Patto"]
   spec.email         = ["paulopatto@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Gem para acessar a api do footstats.}
+  spec.description   = %q{Gem  não oficial para acessar a api do serviço footstats.}
+  spec.homepage      = "https://github.com/paulopatto/footstats"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 1.9.3"
 

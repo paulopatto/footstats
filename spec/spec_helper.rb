@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'bundler'
+Bundler.setup(:default, :test)
+
 require 'pry'
 require 'footstats'
 require 'codeclimate-test-reporter'

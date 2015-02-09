@@ -1,4 +1,6 @@
 # Footstats
+[![Build Status](https://travis-ci.org/paulopatto/footstats.svg?branch=master)](https://travis-ci.org/paulopatto/footstats)
+[![Code Climate](https://codeclimate.com/github/paulopatto/footstats/badges/gpa.svg)](https://codeclimate.com/github/paulopatto/footstats)
 
 **not ready for use**
 

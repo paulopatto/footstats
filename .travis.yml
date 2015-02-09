@@ -7,6 +7,9 @@ rvm:
   - 2.1.2
   - 2.1.5
   - jruby
+  - ruby-head
+
+script: "bundle exec rspec spec/"
 
 notifications:
   - paulopatto@gmail.com

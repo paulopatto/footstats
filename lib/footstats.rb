@@ -1,6 +1,6 @@
-require 'ostruct'
-require 'json'
-require 'csv'
+require 'rubygems'
+require 'bundler/setup'
+Bundler.setup :default
 
 require "footstats/version"
 require 'footstats/request/request_racing'
