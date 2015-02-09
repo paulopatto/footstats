@@ -12,3 +12,7 @@
 *.o
 *.a
 mkmf.log
+.*.sw?
+.ruby-version
+.rbenv-gemsets
+.rvmrc
