@@ -10,3 +10,7 @@ rvm:
 
 notifications:
   - paulopatto@gmail.com
+
+addons:
+  code_climate:
+    repo_token:

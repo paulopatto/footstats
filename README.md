@@ -1,6 +1,6 @@
 # Footstats
 
-TODO: Write a gem description
+**not ready for use**
 
 ## Installation
 
