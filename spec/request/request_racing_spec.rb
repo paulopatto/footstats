@@ -1,4 +1,4 @@
-require './lib/footstats/request/request_racing'
+require 'spec_helper'
 
 describe Footstats::Request::RequestRacing do
   describe ".drivers" do

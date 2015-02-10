@@ -1,5 +1,4 @@
 require 'spec_helper'
-require './lib/footstats/resource'
 
 describe Footstats::Resource do
   subject { described_class }

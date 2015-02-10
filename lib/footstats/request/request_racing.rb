@@ -1,5 +1,8 @@
 require './lib/footstats/request/base'
 require './lib/footstats/racing/driver.rb'
+require './lib/footstats/racing/gp.rb'
+require './lib/footstats/racing/narration.rb'
+require './lib/footstats/racing/ranking.rb'
 require './lib/footstats/racing/team.rb'
 
 module Footstats
@@ -8,9 +11,7 @@ module Footstats
       API = "http://apicorrida.footstats.com.br/api"
 
       def self.drivers
-        request("Piloto/ListaPilotos").map do |driver|
-          Footstats::Racing::Driver.new(driver)
-          end
+        request("Piloto/ListaPilotos").map { |driver| Footstats::Racing::Driver.new(driver) }
       end
 
       def self.teams
@@ -61,7 +62,7 @@ module Footstats
       # - Corrida
       def self.rankings(gp_id)
         request("GP/ClassificacaoGP").map do |fase|
-          binding.pry
+          puts fase
         end
       end
 

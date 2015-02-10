@@ -1,5 +1,4 @@
 require 'spec_helper'
-require './lib/footstats/racing/driver'
 
 describe Footstats::Racing::Driver do
   subject { described_class }
@@ -16,7 +15,7 @@ describe Footstats::Racing::Driver do
     let(:driver) { subject.new(attributes) }
 
     it "sets correct name attribute" do
-      exepct(driver.name).to_not be_nil
+      expect(driver.name).to_not be_nil
       expect(driver.name).to eq("Lewis Hamilton")
     end
 
