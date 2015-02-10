@@ -4,11 +4,10 @@ module Footstats
   module Request
     class Base
       include HTTParty
-      TOKEN = ENV['FOOTSTATS_TOKEN']
 
       protected
       def self.request( method = "", api = "", params={} )
-        params.merge({ token: TOKEN })
+        params.merge!({ token: ENV['FOOTSTATS_TOKEN'] })
 
         JSON.parse(get("#{api}/#{method}", { query: params }).body)
       end

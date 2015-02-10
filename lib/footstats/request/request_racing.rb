@@ -8,7 +8,9 @@ module Footstats
       API = "http://apicorrida.footstats.com.br/api"
 
       def self.drivers
-        request("Piloto/ListaPilotos").map { |driver| Footstats::Racing::Driver.new(driver) }
+        request("Piloto/ListaPilotos").map do |driver|
+          Footstats::Racing::Driver.new(driver)
+          end
       end
 
       def self.teams
