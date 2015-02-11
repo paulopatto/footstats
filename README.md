@@ -1,9 +1,8 @@
-# Footstats
+# Footstats (not ready for use)
 [![Build Status](https://travis-ci.org/paulopatto/footstats.svg?branch=master)](https://travis-ci.org/paulopatto/footstats)
 [![Code Climate](https://codeclimate.com/github/paulopatto/footstats/badges/gpa.svg)](https://codeclimate.com/github/paulopatto/footstats)
 [![Coverage Status](https://coveralls.io/repos/paulopatto/footstats/badge.svg)](https://coveralls.io/r/paulopatto/footstats)
 
-**not ready for use**
 
 ## Installation
 
@@ -24,6 +23,19 @@ Or install it yourself as:
 ## Usage
 
 TODO: Write usage instructions here
+
+
+```ruby
+require 'footstats'
+
+client = Footstats.new
+@drivers = client.racing.drivers
+
+racing_client = Footstats::Api::Racing.new
+@drivers = racing_client.drivers
+
+@drivers.to_json
+```
 
 ## Contributing
 
