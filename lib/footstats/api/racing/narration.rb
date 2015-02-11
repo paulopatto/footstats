@@ -1,6 +1,6 @@
 require './lib/footstats/resource'
 
-class Footstats::Racing::Narration < Footstats::Resource
+class Footstats::Api::Racing::Narration < Footstats::Resource
   field :id, :Id
   field :status, :status
   field :current_lap, :VoltaAtual

@@ -1,6 +1,6 @@
 require './lib/footstats/resource'
 
-class Footstats::Racing::GP < Footstats::Resource
+class Footstats::Api::Racing::GP < Footstats::Resource
   field :id, :Id
   field :track_name, :AutodromoName
   field :track_nickname, :AutodromoApelido

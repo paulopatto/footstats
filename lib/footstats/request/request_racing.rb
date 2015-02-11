@@ -1,9 +1,9 @@
 require './lib/footstats/request/base'
-require './lib/footstats/racing/driver.rb'
-require './lib/footstats/racing/gp.rb'
-require './lib/footstats/racing/narration.rb'
-require './lib/footstats/racing/ranking.rb'
-require './lib/footstats/racing/team.rb'
+require './lib/footstats/api/racing/driver.rb'
+require './lib/footstats/api/racing/gp.rb'
+require './lib/footstats/api/racing/narration.rb'
+require './lib/footstats/api/racing/ranking.rb'
+require './lib/footstats/api/racing/team.rb'
 
 module Footstats
   module Request
@@ -11,15 +11,15 @@ module Footstats
       API = "http://apicorrida.footstats.com.br/api"
 
       def self.drivers
-        request("Piloto/ListaPilotos").map { |driver| Footstats::Racing::Driver.new(driver) }
+        request("Piloto/ListaPilotos").map { |driver| Footstats::Api::Racing::Driver.new(driver) }
       end
 
       def self.teams
-        request("Escuderia/ListaEscuderias").map { |team| Footstats::Racing::Team.new(team) }
+        request("Escuderia/ListaEscuderias").map { |team| Footstats::Api::Racing::Team.new(team) }
       end
 
       def self.gps
-        request("GP/Calendario").map { |gp| Footstats::Racing::GP.new(gp) }
+        request("GP/Calendario").map { |gp| Footstats::Racing::Api::GP.new(gp) }
       end
 
       # Retorna uma lista com os comentários sobre o GP.
@@ -40,7 +40,7 @@ module Footstats
       # - Corrida
       def self.narration(gp_id, offset = 0)
         request("GP/Narracao", {idGP: gp_id, MaxId: offset}).map do |narration|
-          Footstats::Racing::Narration.new(narration)
+          Footstats::Api::Racing::Narration.new(narration)
         end
       end
 
@@ -61,8 +61,12 @@ module Footstats
       # - Q3
       # - Corrida
       def self.rankings(gp_id)
-        request("GP/ClassificacaoGP").map do |fase|
-          puts fase
+        request("GP/ClassificacaoGP", {idGP: gp_id}).map do |fase|
+          fase[1].collect do |ranking_item|
+            ranking_item.merge!("Tipo" => fase[0])
+
+            Footstats::Api::Racing::Ranking.new(ranking_item)
+          end
         end
       end
 

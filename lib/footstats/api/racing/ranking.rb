@@ -1,6 +1,6 @@
 require './lib/footstats/resource'
 
-class Footstats::Racing::Ranking < Footstats::Resource
+class Footstats::Api::Racing::Ranking < Footstats::Resource
   field :position, :Posicao
   field :driver_id, :IdPiloto
   field :driver_name, :NomePiloto

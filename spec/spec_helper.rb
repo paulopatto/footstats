@@ -4,13 +4,13 @@ Bundler.setup(:default, :test)
 
 require 'pry'
 
-require 'codeclimate-test-reporter'
-require 'coveralls'
-Coveralls.wear!
+# require 'codeclimate-test-reporter'
+# require 'coveralls'
+# Coveralls.wear!
 
 require 'footstats'
 
-CodeClimate::TestReporter.start
+# CodeClimate::TestReporter.start
 
 RSpec.configure do |config|
   config.color = true

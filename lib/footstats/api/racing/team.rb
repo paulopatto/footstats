@@ -1,6 +1,6 @@
 require './lib/footstats/resource'
 
-class Footstats::Racing::Team < Footstats::Resource
+class Footstats::Api::Racing::Team < Footstats::Resource
   field :id,       :Id
   field :name,     :Nome
   field :nickname, :Apelido
