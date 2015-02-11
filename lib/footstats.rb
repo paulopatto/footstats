@@ -4,6 +4,9 @@ Bundler.setup :default
 
 require 'footstats/version'
 require 'footstats/client'
+require 'footstats/resource'
+require 'footstats/request/base'
+require 'footstats/request/request_racing'
 
 module Footstats
   class << self

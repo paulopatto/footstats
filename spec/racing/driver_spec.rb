@@ -1,6 +1,7 @@
 require 'spec_helper'
+require 'footstats/api/racing/driver'
 
-describe Footstats::Racing::Driver do
+describe Footstats::Api::Racing::Driver do
   subject { described_class }
 
   describe ".new" do
