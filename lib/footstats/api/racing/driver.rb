@@ -1,4 +1,4 @@
-require './lib/footstats/resource'
+require 'footstats/resource'
 
 module Footstats
   module Api

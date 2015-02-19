@@ -1,4 +1,4 @@
-require './lib/footstats/resource'
+require 'footstats/resource'
 
 class Footstats::Api::Racing::Championship < Footstats::Resource
   field :drivers, :Pilotos

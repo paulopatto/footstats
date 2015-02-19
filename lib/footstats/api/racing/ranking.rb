@@ -1,4 +1,4 @@
-require './lib/footstats/resource'
+require 'footstats/resource'
 
 class Footstats::Api::Racing::Ranking < Footstats::Resource
   field :position, :Posicao

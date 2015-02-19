@@ -1,4 +1,4 @@
-require './lib/footstats/resource'
+require 'footstats/resource'
 
 class Footstats::Api::Racing::Team < Footstats::Resource
   field :id,       :Id

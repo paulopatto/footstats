@@ -1,10 +1,10 @@
-require './lib/footstats/request/base'
-require './lib/footstats/api/racing/gp.rb'
-require './lib/footstats/api/racing/narration.rb'
-require './lib/footstats/api/racing/ranking.rb'
-require './lib/footstats/api/racing/team.rb'
-require './lib/footstats/api/racing/driver.rb'
-require './lib/footstats/api/racing'
+require 'footstats/request/base'
+require 'footstats/api/racing/gp.rb'
+require 'footstats/api/racing/narration.rb'
+require 'footstats/api/racing/ranking.rb'
+require 'footstats/api/racing/team.rb'
+require 'footstats/api/racing/driver.rb'
+require 'footstats/api/racing'
 
 module Footstats
   module Request
