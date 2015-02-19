@@ -1,9 +1,10 @@
 require './lib/footstats/request/base'
-require './lib/footstats/api/racing/driver.rb'
 require './lib/footstats/api/racing/gp.rb'
 require './lib/footstats/api/racing/narration.rb'
 require './lib/footstats/api/racing/ranking.rb'
 require './lib/footstats/api/racing/team.rb'
+require './lib/footstats/api/racing/driver.rb'
+require './lib/footstats/api/racing'
 
 module Footstats
   module Request
@@ -19,7 +20,7 @@ module Footstats
       end
 
       def self.gps
-        request("GP/Calendario").map { |gp| Footstats::Racing::Api::GP.new(gp) }
+        request("GP/Calendario").map { |gp| Footstats::Api::Racing::GP.new(gp) }
       end
 
       # Retorna uma lista com os comentários sobre o GP.
