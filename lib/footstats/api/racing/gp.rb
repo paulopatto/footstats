@@ -20,3 +20,20 @@ module Footstats
     end
   end
 end
+
+
+
+Actual fields:
+
+field :id
+field :championship_id
+field :name
+field :nickname
+field :locality
+field :date
+field :total_laps
+field :status
+field :current_lap
+field :active
+field :city
+field :country
