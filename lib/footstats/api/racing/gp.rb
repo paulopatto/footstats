@@ -7,9 +7,9 @@ module Footstats
         field :track_name, :AutodromoName
         field :track_nickname, :AutodromoApelido
         field :distance, :DisatnciaPista
-        field :location, :Local
-        field :brazilian_time, :DataHoraBrasil
-        field :local_time, :DataHoraLocal
+        field :locality, :Local
+        field :date, :DataHoraBrasil
+        field :local_date, :DataHoraLocal
         field :laps, :QtdVoltas
         field :status, :Status
         field :atual_lap, :VoltaAtual
