@@ -12,7 +12,7 @@ module Footstats
         # field :local_date, :DataHoraLocal
         field :total_laps, :QtdVoltas
         field :status, :Status
-        # field :atual_lap, :VoltaAtual
+        field :current_lap, :VoltaAtual
         field :active, :Ativo
         field :city, :Cidade
         field :country, :Pais
