@@ -71,6 +71,15 @@ module Footstats
         end
       end
 
+      def self.championship_ranking()
+        request("Campeonato/Classificacao").map do |championship|
+          championship[1].collect do |ranking_item|
+            ranking_item.merge!("Tipo" => championship[0])
+
+            Footstats::Api::Racing::Ranking.new(ranking_item)
+          end
+        end
+      end
       protected
       def self.request(method, params = {})
         super(method, API, params)
