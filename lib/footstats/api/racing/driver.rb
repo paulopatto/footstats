@@ -12,7 +12,7 @@ module Footstats
         # field :first_gp,              :PrimeiroGP
         field :nickname,              :Apelido
         field :acronym,               :SiglaNome
-        # field :brith_place,           :PaisOrigem
+        field :country,           :PaisOrigem
         field :nationality,           :Nacionalidade
         field :country_acronym,       :SiglaPais
         # field :fastest_laps,          :VoltasRapidas
