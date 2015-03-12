@@ -9,4 +9,5 @@ class Footstats::Api::Racing::Ranking < Footstats::Resource
   field :team, :Escuderia
   field :acronym, :Sigla
   field :type, :Tipo
+  field :victories, :Vitorias
 end
