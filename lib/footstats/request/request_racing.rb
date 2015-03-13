@@ -9,7 +9,7 @@ require 'footstats/api/racing'
 module Footstats
   module Request
     class RequestRacing < Base
-      API = "http://apicorrida.footstats.com.br/api"
+      API = ENV['FOOTSTATS_ENDPOINT'] || "http://apicorrida.footstats.com.br/api"
 
       def self.drivers
         request("Piloto/ListaPilotos").map { |driver| Footstats::Api::Racing::Driver.new(driver) }

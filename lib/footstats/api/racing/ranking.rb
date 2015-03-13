@@ -3,6 +3,7 @@ require 'footstats/resource'
 class Footstats::Api::Racing::Ranking < Footstats::Resource
   field :position, :Posicao
   field :id, :Id
+  field :drive_id, :IdPiloto
   field :name, :Nome
   field :points, :Pontos
   field :best_lap, :MelhorVolta
