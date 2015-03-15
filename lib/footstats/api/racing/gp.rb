@@ -4,7 +4,7 @@ module Footstats
     module Racing
       class GP < Footstats::Resource
         field :id, :Id
-        field :name, :AutodromoName
+        field :name, :AutodromoNome
         field :nickname, :AutodromoApelido
         # field :distance, :DisatnciaPista
         field :locality, :Local
