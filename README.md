@@ -22,6 +22,16 @@ Or install it yourself as:
 
 ## Usage
 
+### Configuration
+
+Para efetuar configurações globais use:
+
+```ruby
+Footstats.configure do |config|
+  config.token = 'ABCD-1234'
+end
+```
+
 TODO: Write usage instructions here
 
 
