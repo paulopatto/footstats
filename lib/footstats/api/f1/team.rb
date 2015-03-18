@@ -1,5 +1,5 @@
-class Footstats::Api::F1::Team
+class Footstats::Api::F1::Team < Footstats::Api::F1::Base
   def self.all
-    request('/Escuderias/ListaEscuderias')
+    request('/Escuderia/ListaEscuderias')
   end
 end
