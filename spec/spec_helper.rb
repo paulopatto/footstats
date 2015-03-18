@@ -2,13 +2,8 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup(:default, :test)
 
-# require 'codeclimate-test-reporter'
-# require 'coveralls'
-# Coveralls.wear!
-
+Dir["./spec/support/**/*.rb"].each {|file| require file }
 require 'footstats'
-
-# CodeClimate::TestReporter.start
 
 RSpec.configure do |config|
   config.color = true
