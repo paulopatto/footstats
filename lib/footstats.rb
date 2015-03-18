@@ -4,16 +4,24 @@ Bundler.setup :default
 require 'forwardable'
 
 require 'footstats/version'
-require 'footstats/client'
 require 'footstats/config'
-require 'footstats/resource'
-require 'footstats/request/base'
-require 'footstats/request/request_racing'
+require 'footstats/request'
+
+Dir["./lib/footstats/api/f1/*.rb"].each do |file|
+    require file
+end
+
+Dir["./lib/footstats/api/soccer/*.rb"].each do |file|
+    require file
+end
 
 module Footstats
   class <<  self
     extend Forwardable
+    # delegate to @config
     def_delegators :configuration, :token, :token=
+    def_delegators :configuration, :endpoints, :endpoints=
+    def_delegators :configuration, :base_urls, :verbose, :get_endpoint
 
     def configuration
       Thread.current[:footstats_conf] ||= Footstats::Config.new
