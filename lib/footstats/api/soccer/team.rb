@@ -8,7 +8,7 @@ class Footstats::Api::Soccer::Championship < Footstats::Api::Soccer::Base
     return teams
   end
 
-  def self.players(id_team)
-    request('/Jogador/JogadoresEquipe', { idEquipe: id_team })
+  def self.players(team_id)
+    request('/Jogador/JogadoresEquipe', { idEquipe: team_id })
   end
 end
