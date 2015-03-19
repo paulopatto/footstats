@@ -1,59 +1,78 @@
-# Footstats (not ready for use)
+# Footstats gem
+
+> Atenção não recomendamos o uso desta gem ainda em produção.
+
 [![Build Status](https://travis-ci.org/paulopatto/footstats.svg?branch=master)](https://travis-ci.org/paulopatto/footstats)
 [![Code Climate](https://codeclimate.com/github/paulopatto/footstats/badges/gpa.svg)](https://codeclimate.com/github/paulopatto/footstats)
 [![Coverage Status](https://coveralls.io/repos/paulopatto/footstats/badge.svg)](https://coveralls.io/r/paulopatto/footstats)
 
+## Introdução
 
-## Installation
+Esta gem tem como objetivo facilitar o acesso a api de dados da [Footstats](http://footstats.com.br), todos os dados são direitos da mesma.
 
-Add this line to your application's Gemfile:
+## Instalação
+
+### via Ruby gems em linha de comando
+
+`$ gem install footstats`
+
+### com bundler
+Adicione a seguinte linha ao seu  Gemfile:
 
 ```ruby
 gem 'footstats'
 ```
 
-And then execute:
+e  execute:
 
     $ bundle
 
-Or install it yourself as:
+## Mode de usar
 
-    $ gem install footstats
+```ruby
+require 'footstats'
+```
 
-## Usage
-
-### Configuration
+### Configurando
 
 Para efetuar configurações globais use:
 
 ```ruby
 Footstats.configure do |config|
   config.token = 'ABCD-1234'
+  # Não recomendamos mudar os endpoints
+  # config.endpoints[:f1] = 'my-mock-endpoint'
 end
 ```
 
-TODO: Write usage instructions here
-
+> Exemplo 1: Solictando o calendário do campeonato da atual temporada
 
 ```ruby
-require 'footstats'
-
-client = Footstats.new
-@drivers = client.racing.drivers
-
-racing_client = Footstats::Api::Racing.new
-@drivers = racing_client.drivers
-
-@drivers.to_json
+# Get Championship Calendar
+Footstats::Api::F1::Championship.calendar
 ```
 
-## Contributing
+> Exemplo 2: retornando o ranking da temporada atual
 
-1. Fork it ( https://github.com/[my-github-username]/footstats/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+```ruby
+# Get Championship Ranking
+Footstats::Api::F1::Championship.ranking
+```
+
+> Exemplo 3 : Listando todos os campeonatos disponíveis
+
+```ruby
+# Get Championships
+Footstats::Api::Soccer::Championship.all
+```
+
+## Como contribuir
+
+1. Fork o para sua conta ( https://github.com/[my-github-username]/footstats/fork )
+2. Crie seu feature branch (`git checkout -b my-new-feature`)
+3. Commit suas alterações (`git commit -am 'Add some feature'`)
+4. Faça o Push do seu branch (`git push origin my-new-feature`)
+5. Crie um novo Pull Request.
 
 
 ## FOOTSTATS
