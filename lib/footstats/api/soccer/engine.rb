@@ -8,6 +8,10 @@ module Footstats
           "soccer"
         end
 
+        def path
+          'soccer'
+        end
+
         def default_endpoint
           "http://apifutebol.footstats.com.br/api"
         end

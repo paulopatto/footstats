@@ -25,6 +25,8 @@ module Footstats
 
     private
     def self.load_api_dir(dir_name)
+      #FIXME: [POG] Veja uma melhor solução para esta gambiarra
+      require "./lib/footstats/api/#{dir_name}/base.rb"
       Dir["./lib/footstats/api/#{dir_name}/**/*.rb"].each do |file|
         require file
       end

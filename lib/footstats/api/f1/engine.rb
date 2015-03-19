@@ -8,6 +8,10 @@ module Footstats
           "f1"
         end
 
+        def path
+          'f1'
+        end
+
         def default_endpoint
           "http://apicorrida.footstats.com.br/api"
         end
