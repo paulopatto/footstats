@@ -11,6 +11,6 @@ class Footstats::Api::Racing::Ranking < Footstats::Resource
   field :acronym, :Sigla
   field :type, :Tipo
   field :victories, :Vitorias
-  field :pitstop, :PitStop
-  field :team, :Escuderia
+  field :pit_stops, :PitStop
+  field :team_name, :NomeEscuderia
 end
